@@ -1,0 +1,25 @@
+server:
+  error:
+    include-message: never
+    include-stacktrace: never
+
+spring:
+  flyway:
+    locations: classpath:db/migration
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+auth-service:
+  # ... suas configurações existentes ...
+  deploy:
+    resources:
+      limits:
+        cpus: "1.0"
+        memory: 512M
+      reservations:
+        cpus: "0.25"
+        memory: 256M
