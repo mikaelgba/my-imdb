@@ -1,13 +1,13 @@
 # ==========================================
 # Build & Maven
 # ==========================================
-target/
+auth-user-service/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
 # ==========================================
-# Segurança, Segredos & Certificados (CRÍTICO)
+# Segurança, Segredos & Certificados
 # ==========================================
 .env
 .env.*
@@ -16,12 +16,14 @@ target/
 *.key
 *.p12
 *.jks
+*.crt
+certs/
 certs-prod/
 application-local.yml
 application-local.properties
 
 # ==========================================
-# IDEs (IntelliJ IDEA, VS Code, Eclipse)
+# IDEs & Editores
 # ==========================================
 # IntelliJ IDEA
 .idea/
@@ -42,13 +44,15 @@ out/
 bin/
 
 # ==========================================
-# Logs & Arquivos Temporários
+# Logs, Testes & Temporários
 # ==========================================
 logs/
 *.log
 *.tmp
 *.bak
 *.swp
+.jacoco/
+coverage/
 
 # ==========================================
 # Sistema Operacional (Windows / macOS / Linux)
@@ -56,4 +60,5 @@ logs/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+$RECYCLE.BIN/
 .DS_Store
