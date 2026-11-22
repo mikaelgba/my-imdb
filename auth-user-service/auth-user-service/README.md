@@ -114,6 +114,16 @@ Certifique-se de que o container `postgres` esteja rodando e execute a suíte co
 
 ## Documentação dos Endpoints
 
+### **Swagger**
+
+```
+http://localhost:8081/swagger-ui/index.html
+```
+**ou**.
+```bash
+http://localhost:8081/swagger-ui.html
+```
+
 ### Públicos & Autenticação (`/api/v1/auth` e JWKS)
 
 | Método | Rota | Descrição | Status de Sucesso |

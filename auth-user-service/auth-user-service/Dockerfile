@@ -11,8 +11,8 @@ RUN --mount=type=cache,target=/root/.m2 mvn dependency:go-offline -B
 COPY src ./src
 RUN --mount=type=cache,target=/root/.m2 mvn clean package -DskipTests -B
 
-# Extrai o JAR em camadas otimizadas (dependencies, spring-boot-loader, snapshot-dependencies, application)
-RUN java -Djarmode=tools -jar target/*.jar extract --layers --destination target/extracted
+# Extrai o JAR em camadas renomeando o artefato principal para app.jar
+RUN java -Djarmode=tools -jar target/*.jar extract --layers --application-filename app.jar --destination target/extracted
 
 # ==========================================
 # Estágio 2: Imagem final enxuta com CDS (JRE 24)
